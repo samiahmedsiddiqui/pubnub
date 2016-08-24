@@ -10,3 +10,4 @@ To know more [about PubNub] (https://www.pubnub.com/company/), Please visit: htt
 
 To Check all the [PubNub Supported SDKs] (https://www.pubnub.com/docs), Please visit: https://www.pubnub.com/docs
 
+To know about [PubNub JSV3 SDK] (https://www.pubnub.com/docs/web-javascript/pubnub-javascript-sdk), Please visit: https://www.pubnub.com/docs/web-javascript/pubnub-javascript-sdk
