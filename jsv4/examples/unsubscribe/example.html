@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.6.js"></script>
+<script>
+
+PubNub = new PubNub ({
+	publishKey : 'demo',
+	subscribeKey : 'demo'
+});
+
+PubNub.unsubscribe({
+	channels: ['my_channel']
+})
+
+</script>
+</head>
+<body>
+	<div>This function is adding the channel groups and printing the response data in the <b>console</b>.</div>
+	<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
+</body>
+</html>
