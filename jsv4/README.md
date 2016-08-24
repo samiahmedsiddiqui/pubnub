@@ -1,7 +1,12 @@
 # PubNub JSV4 SDK
 
-Here, you can find the PubNub JSV4 SDK code snippets with some working examples. 
+About PubNub
+------------
 
-To know about PubNub, Please visit: https://www.pubnub.com
+[PubNub] (https://www.pubnub.com/) is a secure global Data Stream Network (DSN) and easy-to-use API that enables its customers to connect, scale, and manage realtime applications and IoT devices
 
-To know about PubNub JSV4 SDK, Please visit: https://www.pubnub.com/docs/javascript/pubnub-javascript-sdk-v4
+To know more [about PubNub] (https://www.pubnub.com/company/), Please visit: https://www.pubnub.com/company/
+
+To Check all the [PubNub Supported SDKs] (https://www.pubnub.com/docs), Please visit: https://www.pubnub.com/docs
+
+To know about [PubNub JSV4 SDK] (https://www.pubnub.com/docs/javascript/pubnub-javascript-sdk-v4), Please visit: https://www.pubnub.com/docs/javascript/pubnub-javascript-sdk-v4
