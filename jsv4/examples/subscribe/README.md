@@ -69,4 +69,4 @@ PubNub.subscribe({
 });
 ```
 
-To have a basic [example] (), Please go to: 
+To have a basic [example] (https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv4/examples/subscribe/example.html), Please go to: https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv4/examples/subscribe/example.html
