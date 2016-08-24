@@ -8,4 +8,4 @@ PubNub.unsubscribe({
 })
 ```
 
-To have a basic working [example] (), Please go to: 
+To have a basic working [example] (https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv4/examples/unsubscribe/example.html), Please go to: https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv4/examples/unsubscribe/example.html
