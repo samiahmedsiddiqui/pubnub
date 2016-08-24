@@ -4,13 +4,13 @@
 <script src="http://cdn.pubnub.com/pubnub-3.16.0.min.js"></script>
 <script>
 
-p = PUBNUB({
+pubnub = PUBNUB({
 	publish_key : 'demo',
 	subscribe_key : 'demo'
 })
 
-p.set_uuid("CustomUUID");
-var uuid = p.get_uuid();
+pubnub.set_uuid("CustomUUID");
+var uuid = pubnub.get_uuid();
 console.log(uuid);
 
 </script>
