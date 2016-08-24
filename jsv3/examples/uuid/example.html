@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="http://cdn.pubnub.com/pubnub-3.16.0.min.js"></script>
+<script>
+
+p = PUBNUB({
+	publish_key : 'demo',
+	subscribe_key : 'demo'
+})
+
+p.set_uuid("CustomUUID");
+var uuid = p.get_uuid();
+console.log(uuid);
+
+</script>
+</head>
+<body>
+	<div>This function is adding the channel groups and printing the response data in the <b>console</b>.</div>
+	<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
+</body>
+</html>
