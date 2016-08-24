@@ -14,15 +14,15 @@ PubNub.publish(
 		message: {
 			such: 'object'
         },
-		channel: 'my_channel',
+        channel: 'my_channel',
 		sendByPost: false,
 		storeInHistory: false,
 		meta: {
 			"cool": "meta"
 		}
 	},
-	function (status, response) {
- 		if (status.error) {
+function (status, response) {
+		if (status.error) {
 			console.log(status)
         } else {
 			console.log("message Published w/ timetoken", response.timetoken)
@@ -37,3 +37,4 @@ PubNub.publish(
 	<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
 </body>
 </html>
+
