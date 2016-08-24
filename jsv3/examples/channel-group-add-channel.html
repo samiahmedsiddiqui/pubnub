@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="http://cdn.pubnub.com/pubnub-3.16.0.min.js"></script>
+<script>
+
+p = PUBNUB({
+	publish_key : 'demo',
+	subscribe_key : 'demo'
+})
+
+// Add ch-user-a-present to cg-user-a-friends
+p.channel_group_add_channel({
+	channel_group: "cg-user-a-friends",
+    channel: "ch-user-a-present",
+    callback: function(m) {
+        console.log("CG-Add: ", m);
+    }
+});
+ 
+// Add ch-user-a-present to cg-user-a-status-feed
+p.channel_group_add_channel({
+    channel_group: "cg-user-a-status-feed",
+    channel: "ch-user-a-present",
+    callback: function(m) {
+        console.log("CG-Add: ", m);
+    }
+});
+</script>
+</head>
+<body>
+	<div>
+		<div>
+			<p>Each user will also have two channel groups:</p>
+			<ol>
+				<li>a channel group for observing the online status of friends,</li>
+				<li>a channel group to receive status updates in realtime. Again we'll use the same convention for unique user identifiers.</li>
+			</ol>
+		</div>
+		<div>
+			<p>We will follow this naming convention:</p>
+			<ul>
+				<li><code>cg-user-a-friends</code></li>
+				<li><code>cg-user-a-status-feed</code></li>
+			</ul>
+		</div>
+		<div>
+			<script src="http://cdn.pubnub.com/pubnub-3.16.0.min.js"></script>
+			<script>
+
+			p = PUBNUB({
+				publish_key : 'demo',
+				subscribe_key : 'demo'
+			})
+
+			// Add ch-user-a-present to cg-user-a-friends
+			p.channel_group_add_channel({
+				channel_group: "cg-user-a-friends",
+				channel: "ch-user-a-present",
+				callback: function(m) {
+					console.log("CG-Add: ", m);
+				}
+			});
+			 
+			// Add ch-user-a-present to cg-user-a-status-feed
+			p.channel_group_add_channel({
+				channel_group: "cg-user-a-status-feed",
+				channel: "ch-user-a-present",
+				callback: function(m) {
+					console.log("CG-Add: ", m);
+				}
+			});
+			</script>
+		</div>
+	</div>
+</body>
+</html>
