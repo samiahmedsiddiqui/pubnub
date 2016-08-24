@@ -11,4 +11,4 @@ pubnub.unsubscribe({
 })
 ```
 
-To have a working [example] (https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/unsubscribe/example.html), please check from here: https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/unsubscribe/example.html
+To have a basic working [example] (https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/unsubscribe/example.html), please go to: https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/unsubscribe/example.html
