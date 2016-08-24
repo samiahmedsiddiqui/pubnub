@@ -1,0 +1,27 @@
+<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.6.js"></script>
+<script>
+
+pubnub = new PubNub({
+	publishKey : 'demo',
+    subscribeKey : 'demo'
+})
+
+pubnub.publish(
+    {
+        message: { 
+        	author: "user-a",
+        	status: "I am reading about Advanced Channel Groups!", 
+        	timestamp: Date.now() / 1000 
+    	},
+        channel: "ch-user-a-status"
+    }, 
+    function (status, response) {
+        if (status.error) {
+            // handle error
+            console.log(status)
+        } else {
+            console.log("message Published w/ timetoken", response.timetoken)
+        }
+    }
+);
+</script>
