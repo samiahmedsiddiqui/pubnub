@@ -9,4 +9,4 @@ About PubNub
 
 To know more about [PubNub] (https://www.pubnub.com/company/), Please visit: https://www.pubnub.com/company/
 
-To Check all the [PubNub] (https://www.pubnub.com/) Supported SDKs, Please visit: https://www.pubnub.com/doc
+To Check all the [PubNub] (https://www.pubnub.com/) Supported SDKs, Please visit: https://www.pubnub.com/docs
