@@ -13,21 +13,21 @@ PubNub.publish(
 	{
 		message: {
 			such: 'object'
-        },
-        channel: 'my_channel',
+		},
+		channel: 'my_channel',
 		sendByPost: false,
 		storeInHistory: false,
 		meta: {
 			"cool": "meta"
 		}
 	},
-function (status, response) {
+	function (status, response) {
 		if (status.error) {
 			console.log(status)
-        } else {
+		} else {
 			console.log("message Published w/ timetoken", response.timetoken)
-        }
-    }
+		}
+	}
 );
 
 </script>
