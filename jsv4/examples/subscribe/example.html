@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.6.js"></script>
+<script>
+
+PubNub = new PubNub ({
+	publishKey : 'demo',
+	subscribeKey : 'demo'
+});
+
+PubNub.addListener({
+    status: function(statusEvent) {
+        if (statusEvent.category === "PNConnectedCategory") {
+            var newState = {
+                new: 'connected'
+            };
+            PubNub.setState(
+                { 
+                    state: newState 
+                }, 
+                function (status) {
+                    console.log('connected', status)
+                }
+            );
+        } else if (statusEvent.category === "PNUnknownCategory") {
+            var newState = {
+                new: 'error'
+            };
+            PubNub.setState(
+                { 
+                    state: newState 
+                }, 
+                function (status) {
+                    console.log(statusEvent.errorData.message)
+                }
+            );
+        } else if (statusEvent.category === "PNNetworkIssuesCategory") {
+            var newState = {
+                new: 'disconnected'
+            };
+            PubNub.setState(
+                { 
+                    state: newState 
+                }, 
+                function (status) {
+                    console.log('disconnected', status)
+                }
+            );
+        }
+		else if (statusEvent.category === "PNReconnectedCategory") {
+            var newState = {
+                new: 'reconnect'
+            };
+            PubNub.setState(
+                { 
+                    state: newState 
+                }, 
+                function (status) {
+                    console.log('reconnected', status)
+                }
+            );
+        }
+    },
+    message: function(message) {
+        console.log(message)
+    },
+    presence: function(presenceEvent) {
+		console.log(presenceEvent)
+    }
+})
+ 
+PubNub.subscribe({ 
+    channels: ['my_channel'] 
+});
+
+</script>
+</head>
+<body>
+	<div>This function is adding the channel groups and printing the response data in the <b>console</b>.</div>
+	<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
+</body>
+</html>
