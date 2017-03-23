@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.3.2.min.js"></script> 
+        <script type="text/javascript">
+
+            pubnub = new PubNub({
+                subscribeKey : 'sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe' // This is a Demo Key. You can change this by your own subscribe key.
+            });
+
+            pubnub.addListener({
+                status: function(statusEvent) {
+                   // handle status
+                },
+                message: function(msg) {
+                    console.log(msg.message);
+					//console.log(msg.message.created_at);
+					//console.log(msg.message.text);
+					//console.log(msg.message.user.name);
+					//console.log(msg.message.user.profile_image_url);
+					//console.log(msg.message.user.profile_image_url_https);
+					//console.log(msg.message.user.screen_name);
+                },
+                presence: function(presenceEvent) {
+                    // handle presence
+                }
+            })      
+            pubnub.subscribe({
+                channels: ['pubnub-twitter'] 
+            });
+
+        </script>
+    </head>
+    <body>
+        <div>You can see the stream on console. All the information is in the objects. I have mentioned some of the info like: text, user name, etc as the separate console which is commented in the code for now. You can use them according to your need.</div>
+		<div>To see the Live Stream, Visit <a href="https://www.pubnub.com/developers/realtime-data-streams/twitter-stream/" title="PubNub Twitter Stream">https://www.pubnub.com/developers/realtime-data-streams/twitter-stream/</a></div>
+    </body>
+</html>
