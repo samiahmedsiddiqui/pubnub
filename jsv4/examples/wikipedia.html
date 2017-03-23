@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.3.2.min.js"></script> 
+        <script type="text/javascript">
+
+            pubnub = new PubNub({
+                subscribeKey : 'sub-c-b0d14910-0601-11e4-b703-02ee2ddab7fe' // This is a Demo Key. You can change this by your own subscribe key.
+            });
+
+            pubnub.addListener({
+                status: function(statusEvent) {
+                   // handle status
+                },
+                message: function(msg) {
+                    console.log(msg.message);
+					//console.log(msg.message.link);
+					//console.log(msg.message.event);
+					//console.log(msg.message.item);
+					//console.log(msg.message.user);
+					//console.log(msg.message.country);
+                },
+                presence: function(presenceEvent) {
+                    // handle presence
+                }
+            })      
+            pubnub.subscribe({
+                channels: ['pubnub-wikipedia'] 
+            });
+
+        </script>
+    </head>
+    <body>
+        <div>You can see the Wikipedia Realtime stream on console. All the information is in the object.</div>
+		<div>To see the Live Wikipedia Stream, Visit <a href="https://www.pubnub.com/developers/realtime-data-streams/wikipedia-changes/" title="PubNub Wikipedia">https://www.pubnub.com/developers/realtime-data-streams/wikipedia-changes/</a></div>
+    </body>
+</html>
