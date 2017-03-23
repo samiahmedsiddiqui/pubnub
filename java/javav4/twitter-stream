@@ -1,0 +1,49 @@
+package twitterstream;
+
+import com.pubnub.api.PNConfiguration;
+import com.pubnub.api.PubNub;
+import com.pubnub.api.callbacks.SubscribeCallback;
+import com.pubnub.api.models.consumer.PNStatus;
+import com.pubnub.api.models.consumer.pubsub.PNMessageResult;
+import com.pubnub.api.models.consumer.pubsub.PNPresenceEventResult;
+import java.util.Arrays;
+
+/**
+ *
+ * @author Sami
+ */
+public class TwitterStream {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        PNConfiguration pnConfiguration = new PNConfiguration();
+        pnConfiguration.setSubscribeKey("sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe");
+
+        PubNub pubnub = new PubNub(pnConfiguration);
+
+        pubnub.addListener(new SubscribeCallback() {
+            @Override
+            public void status(PubNub pubnub, PNStatus status) {
+
+            }
+
+            @Override
+            public void message(PubNub pubnub, PNMessageResult message) {
+                System.out.println(message.getMessage());
+            }
+
+            @Override
+            public void presence(PubNub pubnub, PNPresenceEventResult presence) {
+
+            }
+
+        });
+
+        pubnub.subscribe()
+            .channels(Arrays.asList("pubnub-twitter"))
+            .execute();
+    }   
+    //To see the live Demo of Twitter Stream. Visit: https://www.pubnub.com/developers/realtime-data-streams/twitter-stream/
+}
