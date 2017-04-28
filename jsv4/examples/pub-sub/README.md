@@ -1,4 +1,4 @@
-#Pub-Sub Example
+# Pub-Sub Example
 
 This example contains the `publish()`, `subscribe()` and `unsubscribe()` working example. You need to change the keys by your PubNub Provided Key. This example Subscribe to the Channel, Publish to the channel and then unsubscribe from the channel after the 10 seconds.
 
