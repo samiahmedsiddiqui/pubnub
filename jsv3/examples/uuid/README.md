@@ -8,4 +8,4 @@ var uuid = pubnub.get_uuid();
 console.log(uuid);
 ```
 
-To have a basic working [example] (https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/uuid/example.html), Please go to: https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/uuid/example.html
+To have a basic working [example](https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/uuid/example.html), Please go to: https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/uuid/example.html
