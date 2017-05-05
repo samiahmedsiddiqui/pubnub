@@ -26,4 +26,4 @@ pubnub.subscribe({
 })
 ```
 
-To have a basic working [example] (https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/subscribe/example.html), please go to: https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/subscribe/example.html
+To have a basic working [example](https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/subscribe/example.html), please go to: https://github.com/samiahmedsiddiqui/pubnub/blob/master/jsv3/examples/subscribe/example.html
