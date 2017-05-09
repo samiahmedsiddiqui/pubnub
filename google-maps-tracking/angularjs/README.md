@@ -1,4 +1,4 @@
-# Google Maps Traccking Example Using PubNub AngularJS API 
+# Google Maps Tracking Example Using PubNub AngularJS API 
 
 This examples contains 2 APIs.
 1. Google MAP API
