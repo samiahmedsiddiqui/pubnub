@@ -12,7 +12,7 @@
         message: function(msg) {
           var messsageText = msg.message.text;
           if ( messsageText.indexOf('World') > 0 || messsageText.indexOf('#World') > 0 ) { //You can replace World Keyword with your required keyword
-            document.getElementById('tweets').innerHTML += '<div>' + messsageText + '</div>';
+            document.getElementById('tweets').innerHTML += '<div>' + messsageText + ' <span>To view the Tweet please click <a href="https://twitter.com/statuses/'+msg.message.id_str+'" title="here">here</a></span></div>';
           }
         },
         presence: function(presenceEvent) {
