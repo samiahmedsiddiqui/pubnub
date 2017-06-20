@@ -11,8 +11,8 @@
         },
         message: function(msg) {
           var messsageText = msg.message.text;
-          if ( messsageText.indexOf('World') > 0 ) { //You can replace World Keyword with your required keyword
-            document.write('<div>' + messsageText + '</div>');
+          if ( messsageText.indexOf('World') > 0 || messsageText.indexOf('#World') > 0 ) { //You can replace World Keyword with your required keyword
+            document.getElementById('tweets').innerHTML += '<div>' + messsageText + '</div>';
           }
         },
         presence: function(presenceEvent) {
@@ -25,7 +25,9 @@
     </script>
   </head>
   <body>
+    <div id="tweets"></div>
+    <br><br>
     <div>This example filter the tweets which contians the specific keyword or hashtag.</div>
-		<div>To see the Live Stream, Visit <a href="https://www.pubnub.com/developers/realtime-data-streams/twitter-stream/" title="PubNub Twitter Stream">https://www.pubnub.com/developers/realtime-data-streams/twitter-stream/</a></div>
+    <div>To see the Live Stream, Visit <a href="https://www.pubnub.com/developers/realtime-data-streams/twitter-stream/" title="PubNub Twitter Stream">https://www.pubnub.com/developers/realtime-data-streams/twitter-stream/</a></div>
   </body>
 </html>
