@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.12.0.min.js"></script>
+		<script>
+			var channelName = "pubnub_filter"; // You can change your channel name of PubNub from here
+			var metaPayload = { 
+				"language": "english"
+			}
+			
+			PubNub = new PubNub ({
+				publishKey : 'demo', // Your Pub Key
+				subscribeKey : 'demo' // Your Sub Key
+			});
+			
+			PubNub.addListener({
+				status: function(statusEvent) {
+					console.log('Status', statusEvent);
+				},
+				message: function(message) {
+					console.log('Message', message);
+				},
+				presence: function(presenceEvent) {
+					console.log('Presence', presenceEvent);
+				}
+			});
+
+			PubNub.subscribe({ 
+				channels: [channelName]
+			});
+
+			PubNub.setFilterExpression("language == 'english'");
+			
+			PubNub.publish(
+				{
+					message: "Hey, How are you doing?",
+					channel: channelName,
+					meta: metaPayload 
+				},
+				function (status, response) {
+					if (status.error) {
+						console.log(status)
+					} else {
+						console.log("message Published w/ timetoken", response.timetoken)
+					}
+				}
+			);
+
+		</script>
+	</head>
+	<body>
+		<div>This function filters the messages which contains the `language` meta with the value of `english` only. You can view the output on <b>console</b>.</div>
+		<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
+	</body>
+</html>
