@@ -1,5 +1,5 @@
 {
-	"name": "mnubo SmartObjects: IoT Analytics 2",
+	"name": "Block 1 with required fields only",
 	"sub-title": "Ingest, store and analyze IoT data to derive actionable insights",
 	"description": "SmartObjects from mnubo provides an API and a UI for connected product manufacturers and service providers to have an instant (real-time) and comprehensive (360\u25e6) view of their connected assets. SmartObjects includes out of the box \u0026 custom insights to better understand product performance and usage, customer engagement and churn, condition monitoring, diagnostics and faults, capacity tracking and predictive trends",
 	"walkthorugh": "The block has three event handlers that are responsible for posting events, creating owners and creating objects in Mnubo system. To learn more about Mnubo and get your own API credentials, visit the Mnubo homepage."	
