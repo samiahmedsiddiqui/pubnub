@@ -1,0 +1,34 @@
+{
+	"name": "mnubo SmartObjects: IoT Analytics",
+	"sub-title": "Ingest, store and analyze IoT data to derive actionable insights",
+	"tags": [""],
+	"description": "SmartObjects from mnubo provides an API and a UI for connected product manufacturers and service providers to have an instant (real-time) and comprehensive (360\u25e6) view of their connected assets. SmartObjects includes out of the box \u0026 custom insights to better understand product performance and usage, customer engagement and churn, condition monitoring, diagnostics and faults, capacity tracking and predictive trends",
+	"summary": "",
+	"url-title": "Try it Now",
+	"url": "https:\/\/admin.pubnub.com\/#\/blocks\/191\/import",
+	"license": "",
+	"update-date": "1496428905",
+	"author-title": "Author",
+	"author": "mnubo",
+	"entry-title": "",
+	"entry": "\u003Ca href=\u0022https:\/\/smartobjects.mnubo.com\/documentation\/\u0022 title=\u0022Get your API Keys\u0022 target=\u0022_blank\u0022\u003Emnubo Docs\u003C\/a\u003E",
+	"blocks-presentation": "",
+	"show-blocks-presentation": "0",
+	"walkthorugh-title": "Walkthrough",
+	"walkthorugh": "The block has three event handlers that are responsible for posting events, creating owners and creating objects in Mnubo system. To learn more about Mnubo and get your own API credentials, visit the Mnubo homepage.",
+	"input-output": [{
+		"title": "Hello World",
+		"desc": "JavaScript.  The basic BLOCK.  One <strong>event handler</strong>.",
+		"code": "\u003Cpre class=\u0022brush:javascript;\u0022\u003E\nexport default request =\u0026gt; {\n    return request.ok({\n        hello : \u0022world\u0022\n    })\n}\n\u003C\/pre\u003E"
+	}, {
+		"title": "",
+		"desc": "",
+		"code": ""
+	}, {
+		"title": "",
+		"desc": "",
+		"code": ""
+	}],
+	"version": 1.1,
+	"dependencies": ""
+}
