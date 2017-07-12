@@ -16,8 +16,21 @@
 "entry-title":"t4m entry",
 "entry":"entry",
 "blocks-presentation":"",
-"update-date":"Jul 12, 2017",
 "show-blocks-presentation":true,
 "walkthorugh":"walkthorugh",
-"walkthorugh-title":"walkthorugh t"
+"walkthorugh-title":"walkthorugh t",
+"input-output":[
+{
+"title":"test code",
+"desc":"test code desc",
+"code":
+{ "input": "code 1", "output": "code 2" }
+},
+{
+"title":"test code22",
+"desc":"test code desc2",
+"code":
+{ "input": "code 21", "output": "code 22" }
+}
+]
 }
