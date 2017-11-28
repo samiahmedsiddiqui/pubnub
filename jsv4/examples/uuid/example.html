@@ -1,17 +1,17 @@
 <!DOCTYPE>
 <html>
 <head>
-<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.6.js"></script>
+<script src="../pubnub.4.18.0.min.js"></script>
 <script>
 
-PubNub = new PubNub ({
-	publishKey : 'demo',
-	subscribeKey : 'demo'
-});
+	PubNub = new PubNub ({
+		publishKey : 'demo',
+		subscribeKey : 'demo'
+	});
 
-PubNub.setUUID("CustomUUID");
-var UUID = PubNub.getUUID();
-console.log(UUID);
+	PubNub.setUUID("CustomUUID");
+	var UUID = PubNub.getUUID();
+	console.log(UUID);
 
 </script>
 </head>
