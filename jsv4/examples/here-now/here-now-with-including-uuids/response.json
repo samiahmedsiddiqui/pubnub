@@ -1,0 +1,11 @@
+{
+    "totalChannels": 1,
+    "totalOccupancy": 3,
+    "channels": {
+        "my_channel": {
+            "occupants": [],
+            "name": "my_channel",
+            "occupancy": 3
+        }
+    }
+}

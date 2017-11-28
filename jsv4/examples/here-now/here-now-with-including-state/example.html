@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.18.0.min.js"></script>
+		<script>
+			PubNub = new PubNub ({
+				publishKey : 'demo', // Your Pub Key
+				subscribeKey : 'demo', // Your Sub Key
+				uuid : 'User 3'
+			});
+
+			PubNub.addListener({
+				status: function(statusEvent) {
+					console.log(statusEvent);
+				},
+				message: function(message) {
+					if ( ! message.error ) {
+						console.log(message);
+					}
+				},
+				presence: function(presenceEvent) {
+					console.log(presenceEvent);
+				}
+			});
+
+			PubNub.subscribe({
+				channels: ['my_channel'] // change channel name by your channel name
+			});
+
+			var newState = {
+                age: 24
+            };
+
+			PubNub.setState({
+				channels: ['my_channel'],
+				state: newState 
+			}, function (status) {
+				console.log(status);
+            });
+
+			PubNub.hereNow({
+				channels: ['my_channel'],
+				includeState: true
+			}, function (status, response) {
+				console.log(response);
+			});
+		</script>
+	</head>
+	<body>
+		<div>This function is subscribing channel and retreiving response data of here now in the <b>console</b>.</div>
+		<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
+	</body>
+</html>

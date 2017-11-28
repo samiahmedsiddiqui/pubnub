@@ -1,22 +1,22 @@
 <!DOCTYPE>
 <html>
-<head>
-<script src="../pubnub.4.18.0.min.js"></script>
-<script>
+	<head>
+		<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.18.0.min.js"></script>
+		<script>
 
-	PubNub = new PubNub ({
-		publishKey : 'demo',
-		subscribeKey : 'demo'
-	});
+			PubNub = new PubNub ({
+				publishKey : 'demo',
+				subscribeKey : 'demo'
+			});
 
-	PubNub.setUUID("CustomUUID");
-	var UUID = PubNub.getUUID();
-	console.log(UUID);
+			PubNub.setUUID("CustomUUID");
+			var UUID = PubNub.getUUID();
+			console.log(UUID);
 
-</script>
-</head>
-<body>
-	<div>This function is adding the channel groups and printing the response data in the <b>console</b>.</div>
-	<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
-</body>
+		</script>
+	</head>
+	<body>
+		<div>This function is adding the channel groups and printing the response data in the <b>console</b>.</div>
+		<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
+	</body>
 </html>
