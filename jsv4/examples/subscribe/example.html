@@ -3,15 +3,10 @@
 	<head>
 		<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.18.0.min.js"></script>
 		<script>
-
-			var statusListener = document.getElementById('status'),
-				messageListener = document.getElementById('message'),
-				presenceListener = document.getElementById('presence');
-
 			PubNub = new PubNub ({
-				publishKey : 'demo',
-				subscribeKey : 'demo',
-				uuid : 'User1'
+						publishKey : 'pub-c-46462497-919d-40ef-9783-305e50183d1d', // Your Pub Key
+						subscribeKey : 'sub-c-815ced02-d4c9-11e7-bf53-fa44d4cd42e4', // Your Sub Key
+						uuid : 'User1'
 			});
 
 			PubNub.addListener({
@@ -68,10 +63,10 @@
 			        }
 			    },
 			    message: function(message) {
-			        messageListener.innerHTML = messageListener.innerHTML + '<br>' + JSON.stringify(message, null, 4);
+					document.getElementById('message').innerHTML.innerHTML = document.getElementById('message').innerHTML + '<br>' + JSON.stringify(message, null, 4);
 			    },
 			    presence: function(presenceEvent) {
-					presenceListener.innerHTML = presenceListener.innerHTML + '<br>' + JSON.stringify(presenceEvent, null, 4);
+					document.getElementById('presence').innerHTML = document.getElementById('presence').innerHTML + '<br>' + JSON.stringify(presenceEvent, null, 4);
 			    }
 			})
 			 
@@ -83,8 +78,7 @@
 		</script>
 	</head>
 	<body>
-		<div>This function is adding the channel groups and printing the response data in the <b>console</b>.</div>
-		<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
+		<div>This function is adding the channel groups and printing the response data.</div>
 		<br><br>
 		<h4>Status</h4>
 		<div id="status"></div>
