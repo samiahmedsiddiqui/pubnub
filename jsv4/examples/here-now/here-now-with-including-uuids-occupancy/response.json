@@ -1,3 +1,11 @@
+// Example of Status
+{
+    "error": false,
+    "operation": "PNHereNowOperation",
+    "statusCode": 200
+}
+
+// Example of Response
 {
     "totalChannels": 2,
     "totalOccupancy": 3,
