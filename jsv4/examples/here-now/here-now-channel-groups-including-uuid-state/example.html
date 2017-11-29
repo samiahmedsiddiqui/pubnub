@@ -1,0 +1,69 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.18.0.min.js"></script>
+		<script>
+			/*PubNub = new PubNub ({
+				publishKey : 'demo', // Your Pub Key
+				subscribeKey : 'demo', // Your Sub Key
+				uuid : 'User3'
+			});*/
+
+PubNub = new PubNub ({
+	publishKey : 'pub-c-46462497-919d-40ef-9783-305e50183d1d', // Your Pub Key
+	subscribeKey : 'sub-c-815ced02-d4c9-11e7-bf53-fa44d4cd42e4', // Your Sub Key
+	uuid : 'User2'
+});
+
+			PubNub.subscribe({
+				channels: ['my_channel_1']
+			});
+
+			PubNub.channelGroups.addChannels(
+				{
+					channels: ['my_channel_1', 'my_channel_2'],
+					channelGroup: "myChannelGroup"
+				},
+				function(status) {
+					if (status.error) {
+						console.log("operation failed w/ status: ", status);
+					} else {
+						console.log("operation done!")
+					}
+				}
+			);
+
+			var newState = {
+				isTyping: true
+			};
+			PubNub.setState(
+                {
+                    state: newState,
+					channels: ["my_channel_1"]
+                },
+                function (status) {
+                    console.log('isTyping', status);
+                }
+            );
+
+			PubNub.hereNow({
+				channels: ["my_channel_1"], 
+				channelGroups : ["myChannelGroup"],
+				includeUUIDs: true,
+				includeState: true
+			}, function (status, response) {
+				document.getElementById('status').innerHTML = JSON.stringify(status, null, 4);
+				document.getElementById('response').innerHTML = JSON.stringify(response, null, 4);
+			});
+		</script>
+	</head>
+	<body>
+		<div>This function is subscribing channel and retreiving response data of here now.</div>
+		<br><br>
+		<h4>Status</h4>
+		<div id="status"></div>
+		<br><br>
+		<h4>Response</h4>
+		<div id="response"></div>
+	</body>
+</html>

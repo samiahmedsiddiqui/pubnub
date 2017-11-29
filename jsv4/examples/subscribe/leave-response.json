@@ -1,0 +1,11 @@
+{
+    "channel": "my_channel",
+    "subscription": null,
+    "actualChannel": null,
+    "subscribedChannel": "my_channel-pnpres",
+    "action": "leave",
+    "timetoken": "15119446002445794",
+    "occupancy": 1,
+    "uuid": "User1",
+    "timestamp": 1511944600
+}

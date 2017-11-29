@@ -1,0 +1,29 @@
+// Example of Status
+{
+    "error": false,
+    "operation": "PNHereNowOperation",
+    "statusCode": 200
+}
+
+// Example of Response
+{
+    "totalChannels": 1,
+    "totalOccupancy": 2,
+    "channels": {
+        "my_channel_1": {
+            "occupants": [
+                {
+                    "uuid": "User1"
+                },
+                {
+                    "state": {
+                        "isTyping": true
+                    },
+                    "uuid": "User2"
+                }
+            ],
+            "name": "my_channel_1",
+            "occupancy": 2
+        }
+    }
+}

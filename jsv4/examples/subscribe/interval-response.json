@@ -1,0 +1,10 @@
+{
+    "channel": "my_channel",
+    "subscription": null,
+    "actualChannel": null,
+    "subscribedChannel": "my_channel-pnpres",
+    "action": "interval",
+    "timetoken": "15119477396210903",
+    "occupancy": 4,
+    "timestamp": 1511947739
+}

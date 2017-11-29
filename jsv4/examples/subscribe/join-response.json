@@ -1,0 +1,11 @@
+{
+    "channel": "my_channel",
+    "subscription": null,
+    "actualChannel": null,
+    "subscribedChannel": "my_channel-pnpres",
+    "action": "join",
+    "timetoken": "15119466699655811",
+    "occupancy": 2,
+    "uuid": "User1",
+    "timestamp": 1511946669
+}

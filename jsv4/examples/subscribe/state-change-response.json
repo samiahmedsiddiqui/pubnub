@@ -1,0 +1,14 @@
+{
+    "channel": "my_channel",
+    "subscription": null,
+    "actualChannel": null,
+    "subscribedChannel": "my_channel-pnpres",
+    "action": "state-change",
+    "state": {
+        "isTyping": true
+    },
+    "timetoken": "15119477895378127",
+    "occupancy": 5,
+    "uuid": "User4",
+    "timestamp": 1511947789
+}
