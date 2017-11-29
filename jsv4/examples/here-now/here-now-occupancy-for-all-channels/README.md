@@ -1,4 +1,4 @@
-# Here Now Example
+# GLobal Here Now Occupancy Example
 
 This example contains the `subscribe()`, `setState()` and `hereNow()` working example. You need to change the keys by your PubNub Provided Key. This example Subscribe to the Channel, set the state and obtain the information of channel.
 

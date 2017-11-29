@@ -1,10 +1,14 @@
-# Here Now Including UUIDs with Occupancy Example
+# Here Now Channel Groups Example
 
-This example contains the `subscribe()` and `hereNow()` working example. You need to change the keys by your PubNub Provided Key. This example Subscribe to the Channel, set the state and obtain the information of channel.
+This example contains the `subscribe()`, `addChannels()` and `hereNow()` working example. You need to change the keys by your PubNub Provided Key. This example Subscribe to the Channel, set the state and obtain the information of channel.
 
 # Subscribe
 
 `subscribe()` function causes the client to create an open TCP socket to the PubNub Real-Time Network and begin listening for messages on a specified channel.
+
+# Adding Channels
+
+`addChannels()` function is used to add the channels under the channel group.
 
 # Here Now
 

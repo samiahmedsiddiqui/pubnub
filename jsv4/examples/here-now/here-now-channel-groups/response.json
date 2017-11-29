@@ -1,0 +1,30 @@
+{
+    "totalChannels": 2,
+    "totalOccupancy": 3,
+    "channels": {
+        "my_channel_1": {
+            "occupants": [
+                {
+                    "state": null,
+                    "uuid": "User1"
+                },
+                {
+                    "state": null,
+                    "uuid": "User3"
+                }
+            ],
+            "name": "my_channel_1",
+            "occupancy": 2
+        },
+        "my_channel_2": {
+            "occupants": [
+                {
+                    "state": null,
+                    "uuid": "User2"
+                }
+            ],
+            "name": "my_channel_2",
+            "occupancy": 1
+        }
+    }
+}
