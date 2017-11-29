@@ -1,38 +1,13 @@
 // Example of Status
 {
     "error": false,
-    "operation": "PNHereNowOperation",
+    "operation": "PNWhereNowOperation",
     "statusCode": 200
 }
 
 // Example of Response
 {
-    "totalChannels": 2,
-    "totalOccupancy": 3,
-    "channels": {
-        "my_channel_1": {
-            "occupants": [
-                {
-                    "state": null,
-                    "uuid": "User1"
-                },
-                {
-                    "state": null,
-                    "uuid": "User3"
-                }
-            ],
-            "name": "my_channel_1",
-            "occupancy": 2
-        },
-        "my_channel_2": {
-            "occupants": [
-                {
-                    "state": null,
-                    "uuid": "User2"
-                }
-            ],
-            "name": "my_channel_2",
-            "occupancy": 1
-        }
-    }
+    "channels": [
+        "my_channel_1"
+    ]
 }

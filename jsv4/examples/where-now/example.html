@@ -6,7 +6,7 @@
 			PubNub = new PubNub ({
 				publishKey : 'demo', // Your Pub Key
 				subscribeKey : 'demo', // Your Sub Key
-				uuid : 'User3'
+				uuid : 'User1'
 			});
 
 			PubNub.subscribe({
@@ -27,8 +27,8 @@
 				}
 			);
 
-			PubNub.hereNow({
-				channelGroups : ["myChannelGroup"]
+			PubNub.whereNow({
+				uuid: "User1"
 			}, function (status, response) {
 				document.getElementById('status').innerHTML = JSON.stringify(status, null, 4);
 				document.getElementById('response').innerHTML = JSON.stringify(response, null, 4);
