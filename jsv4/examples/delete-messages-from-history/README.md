@@ -1,7 +1,7 @@
-# Where Now Example
+# Delete Messages from History Example
 
-This example contains the `whereNow()` working example. You need to change the keys by your PubNub Provided Key. This example Subscribe to the Channel, retreive the channels information from which user us subscribed to.
+This example contains the `deleteMessages()` working example. You need to change the keys by your PubNub Provided Key. 
 
-# Where Now
+# Delete Messages from History
 
-`whereNow()` is the function which is used to retreive the information of channels from which user is connected.
+`deleteMessages()`  is the function which is used to Delete Messages from History of channels.
