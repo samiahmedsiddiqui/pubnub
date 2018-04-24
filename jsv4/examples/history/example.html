@@ -9,26 +9,14 @@
 				uuid : 'User1'
 			});
 
-			PubNub.subscribe({
-				channels: ['my_channel_1']
-			});
+			var timestamp   = +new Date;
+			timestamp   = timestamp * 10000;
 
-			PubNub.channelGroups.addChannels(
-				{
-					channels: ['my_channel_1', 'my_channel_2'],
-					channelGroup: "myChannelGroup"
-				}, 
-				function(status) {
-					if (status.error) {
-						console.log("operation failed w/ status: ", status);
-					} else {
-						console.log("operation done!")
-					}
-				}
-			);
-
-			PubNub.whereNow({
-				uuid: "User1"
+			PubNub.history({
+				channel: 'my_channel',
+				reverse: true,
+				stringifiedTimeToken: true,
+				start: timestamp
 			}, function (status, response) {
 				document.getElementById('status').innerHTML = JSON.stringify(status, null, 4);
 				document.getElementById('response').innerHTML = JSON.stringify(response, null, 4);
