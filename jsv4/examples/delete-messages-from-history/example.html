@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.20.2.min.js"></script>
+    <script>
+      PubNub = new PubNub ({
+        publishKey : "demo", // Your Pub Key
+        subscribeKey : "demo", // Your Sub Key
+        uuid : 'User1'
+      });
+
+      PubNub.deleteMessages(
+        {
+          channel: "pubnub_test",
+        },
+        (result) => {
+          document.getElementById('response').innerHTML = JSON.stringify(result, null, 4);
+        }
+      );
+    </script>
+  </head>
+  <body>
+    <div>This function is deleting the messages from history and retreiving response data of it.</div>
+    <br><br>
+    <h4>Response</h4>
+    <div id="response"></div>
+  </body>
+</html>
