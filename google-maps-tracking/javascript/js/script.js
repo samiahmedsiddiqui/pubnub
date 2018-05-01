@@ -6,19 +6,19 @@ var lineCoords = [];
 
 var initialize = function() {
   map = new google.maps.Map(document.getElementById('map-canvas'), {
-          center:{
-            lat:lat,
-            lng:lng
-          },
-          zoom:12
-        });
+    center:{
+      lat: lat,
+      lng: lng
+    },
+    zoom:12
+  });
   mark = new google.maps.Marker({
-           position: {
-             lat:lat,
-             lng:lng
-           },
-           map:map
-         });
+    position: {
+      lat: lat,
+      lng: lng
+    },
+    map:map
+  });
   lineCoords.push(new google.maps.LatLng(window.lat, window.lng));
 };
 window.initialize = initialize;
@@ -27,14 +27,14 @@ var redraw = function(payload) {
   lat = payload.message.lat;
   lng = payload.message.lng;
   map.setCenter({
-    lat:lat,
-    lng:lng,
-    alt:0
+    lat: lat,
+    lng: lng,
+    alt: 0
   });
   mark.setPosition({
-    lat:lat,
-    lng:lng,
-    alt:0
+    lat: lat,
+    lng: lng,
+    alt: 0
   });
   lineCoords.push(new google.maps.LatLng(lat, lng));
   var lineCoordinatesPath = new google.maps.Polyline({
@@ -54,7 +54,7 @@ var pubnub = new PubNub({
 });
 
 pubnub.addListener({
-    message:redraw
+  message:redraw
 });
 pubnub.subscribe({
   channels: [pnChannel]
@@ -64,8 +64,8 @@ setInterval(function() {
   pubnub.publish({
     channel:pnChannel,
     message: {
-        lat:window.lat + 0.001,
-        lng:window.lng + 0.01
+      lat: window.lat + 0.001,
+      lng: window.lng + 0.01
     }
   });
 }, 5000);
