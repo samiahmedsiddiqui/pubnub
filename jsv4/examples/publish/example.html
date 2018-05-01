@@ -1,40 +1,40 @@
 <!DOCTYPE>
 <html>
-	<head>
-		<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.18.0.min.js"></script>
-		<script>
+  <head>
+    <script src="../lib/pubnub.4.20.3.min.js"></script>
+    <script>
 
-		PubNub = new PubNub ({
-			publishKey : 'demo',
-			subscribeKey : 'demo'
-		});
+    PubNub = new PubNub ({
+      publishKey : 'demo',
+      subscribeKey : 'demo'
+    });
 
-		PubNub.publish(
-			{
-				message: {
-					such: 'object'
-				},
-				channel: 'my_channel',
-				sendByPost: false,
-				storeInHistory: false,
-				meta: {
-					"cool": "meta"
-				}
-			},
-			function (status, response) {
-				if (status.error) {
-					console.log(status)
-				} else {
-					console.log("message Published w/ timetoken", response.timetoken)
-				}
-			}
-		);
+    PubNub.publish(
+      {
+        message: {
+          such: 'object'
+        },
+        channel: 'my_channel',
+        sendByPost: false,
+        storeInHistory: false,
+        meta: {
+          "cool": "meta"
+        }
+      },
+      function (status, response) {
+        if (status.error) {
+          console.log(status);
+        } else {
+          console.log("message Published w/ timetoken", response.timetoken);
+        }
+      }
+    );
 
-		</script>
-	</head>
-	<body>
-		<div>This function is adding the channel groups and printing the response data in the <b>console</b>.</div>
-		<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
-		<div><br/>Publish Message :)</div>
-	</body>
+    </script>
+  </head>
+  <body>
+    <div>This function is adding the channel groups and printing the response data in the <b>console</b>.</div>
+    <div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
+    <div><br/>Publish Message :)</div>
+  </body>
 </html>

@@ -1,92 +1,90 @@
 <!DOCTYPE>
 <html>
-	<head>
-		<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.18.0.min.js"></script>
-		<script>
-			PubNub = new PubNub ({
-						publishKey : 'pub-c-46462497-919d-40ef-9783-305e50183d1d', // Your Pub Key
-						subscribeKey : 'sub-c-815ced02-d4c9-11e7-bf53-fa44d4cd42e4', // Your Sub Key
-						uuid : 'User1'
-			});
+  <head>
+    <script src="../lib/pubnub.4.20.3.min.js"></script>
+    <script>
+      PubNub = new PubNub ({
+        publishKey : 'demo', // Your Pub Key
+        subscribeKey : 'demo', // Your Sub Key
+        uuid : 'User1'
+      });
 
-			PubNub.addListener({
-			    status: function(statusEvent) {
-			        if (statusEvent.category === "PNConnectedCategory") {
-			            var newState = {
-			                new: 'connected'
-			            };
-			            PubNub.setState(
-			                { 
-			                    state: newState 
-			                }, 
-			                function (status) {
-			                    console.log('connected', status);
-			                }
-			            );
-			        } else if (statusEvent.category === "PNUnknownCategory") {
-			            var newState = {
-			                new: 'error'
-			            };
-			            PubNub.setState(
-			                { 
-			                    state: newState 
-			                }, 
-			                function (status) {
-			                    console.log(statusEvent.errorData.message);
-			                }
-			            );
-			        } else if (statusEvent.category === "PNNetworkIssuesCategory") {
-			            var newState = {
-			                new: 'disconnected'
-			            };
-			            PubNub.setState(
-			                { 
-			                    state: newState 
-			                }, 
-			                function (status) {
-			                    console.log('disconnected', status);
-			                }
-			            );
-			        }
-					else if (statusEvent.category === "PNReconnectedCategory") {
-			            var newState = {
-			                new: 'reconnect'
-			            };
-			            PubNub.setState(
-			                { 
-			                    state: newState 
-			                }, 
-			                function (status) {
-			                    console.log('reconnected', status);
-			                }
-			            );
-			        }
-			    },
-			    message: function(message) {
-					document.getElementById('message').innerHTML.innerHTML = document.getElementById('message').innerHTML + '<br>' + JSON.stringify(message, null, 4);
-			    },
-			    presence: function(presenceEvent) {
-					document.getElementById('presence').innerHTML = document.getElementById('presence').innerHTML + '<br>' + JSON.stringify(presenceEvent, null, 4);
-			    }
-			})
-			 
-			PubNub.subscribe({ 
-			    channels: ['my_channel'],
-				withPresence: true
-			});
+      PubNub.addListener({
+        status: function(statusEvent) {
+          if (statusEvent.category === "PNConnectedCategory") {
+            var newState = {
+              new: 'connected'
+            };
+            PubNub.setState(
+              {
+                state: newState
+              },
+              function (status) {
+                console.log('connected', status);
+              }
+            );
+          } else if (statusEvent.category === "PNUnknownCategory") {
+            var newState = {
+              new: 'error'
+            };
+            PubNub.setState(
+              {
+                state: newState
+              },
+              function (status) {
+                console.log(statusEvent.errorData.message);
+              }
+            );
+          } else if (statusEvent.category === "PNNetworkIssuesCategory") {
+            var newState = {
+              new: 'disconnected'
+            };
+            PubNub.setState(
+              {
+                state: newState
+              },
+              function (status) {
+                console.log('disconnected', status);
+              }
+            );
+          } else if (statusEvent.category === "PNReconnectedCategory") {
+            var newState = {
+              new: 'reconnect'
+            };
+            PubNub.setState(
+              {
+                state: newState
+              },
+              function (status) {
+                console.log('reconnected', status);
+              }
+            );
+          }
+        },
+        message: function(message) {
+          document.getElementById('message').innerHTML.innerHTML = document.getElementById('message').innerHTML + '<br>' + JSON.stringify(message, null, 4);
+        },
+        presence: function(presenceEvent) {
+          document.getElementById('presence').innerHTML = document.getElementById('presence').innerHTML + '<br>' + JSON.stringify(presenceEvent, null, 4);
+        }
+      });
 
-		</script>
-	</head>
-	<body>
-		<div>This function is adding the channel groups and printing the response data.</div>
-		<br><br>
-		<h4>Status</h4>
-		<div id="status"></div>
-		<br><br>
-		<h4>Message</h4>
-		<div id="message"></div>
-		<br><br>
-		<h4>Presence</h4>
-		<div id="presence"></div>
-	</body>
+      PubNub.subscribe({
+        channels: ['my_channel'],
+        withPresence: true
+      });
+    </script>
+  </head>
+  <body>
+    <div>This function is adding the channel groups and printing the response data.</div>
+    <br><br>
+    <h4>Status</h4>
+    <div id="status"></div>
+    <br><br>
+    <h4>Message</h4>
+    <div id="message"></div>
+    <br><br>
+    <h4>Presence</h4>
+    <div id="presence"></div>
+  </body>
 </html>

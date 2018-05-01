@@ -1,49 +1,51 @@
 <!DOCTYPE>
 <html>
-	<head>
-		<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.18.0.min.js"></script>
-		<script>
-			PubNub = new PubNub ({
-				publishKey : 'demo', // Your Pub Key
-				subscribeKey : 'demo', // Your Sub Key
-				uuid : 'User3'
-			});
+  <head>
+    <script src="../../lib/pubnub.4.20.3.min.js"></script>
+    <script>
+      PubNub = new PubNub ({
+        publishKey : 'demo', // Your Pub Key
+        subscribeKey : 'demo', // Your Sub Key
+        uuid : 'User3'
+      });
 
-			PubNub.addListener({
-				status: function(statusEvent) {
-					console.log(statusEvent);
-				},
-				message: function(message) {
-					if ( ! message.error ) {
-						console.log(message);
-					}
-				},
-				presence: function(presenceEvent) {
-					console.log(presenceEvent);
-				}
-			});
+      PubNub.addListener({
+        status: function(statusEvent) {
+          console.log(statusEvent);
+        },
+        message: function(message) {
+          if (!message.error) {
+            console.log(message);
+          }
+        },
+        presence: function(presenceEvent) {
+          console.log(presenceEvent);
+        }
+      });
 
-			PubNub.subscribe({
-				channels: ['my_channel'] // change channel name by your channel name
-			});
+      PubNub.subscribe({
+        channels: ['my_channel'] // change channel name by your channel name
+      });
 
-			PubNub.hereNow({
-				channels: ['my_channel'],
-				includeUUIDs: false
-			}, function (status, response) {
-				document.getElementById('status').innerHTML = JSON.stringify(status, null, 4);
-				document.getElementById('response').innerHTML = JSON.stringify(response, null, 4);
-
-			});
-		</script>
-	</head>
-	<body>
-		<div>This function is subscribing channel and retreiving status and response data of here now.</div>
-		<br><br>
-		<h4>Status</h4>
-		<div id="status"></div>
-		<br><br>
-		<h4>Response</h4>
-		<div id="response"></div>
-	</body>
+      PubNub.hereNow(
+        {
+          channels: ['my_channel'],
+          includeUUIDs: false
+        },
+        function (status, response) {
+          document.getElementById('status').innerHTML   = JSON.stringify(status, null, 4);
+          document.getElementById('response').innerHTML = JSON.stringify(response, null, 4);
+        }
+      );
+    </script>
+  </head>
+  <body>
+    <div>This function is subscribing channel and retreiving status and response data of here now.</div>
+    <br><br>
+    <h4>Status</h4>
+    <div id="status"></div>
+    <br><br>
+    <h4>Response</h4>
+    <div id="response"></div>
+  </body>
 </html>
