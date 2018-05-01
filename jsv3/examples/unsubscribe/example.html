@@ -1,26 +1,24 @@
 <!DOCTYPE>
 <html>
-<head>
-<script src="http://cdn.pubnub.com/pubnub-3.16.0.min.js"></script>
-<script>
+  <head>
+  <script src="../lib/pubnub-3.16.5.min.js"></script>
+  <script>
+    pubnub = PUBNUB({
+      publish_key : 'demo',
+      subscribe_key : 'demo'
+    });
 
-pubnub = PUBNUB({
-	publish_key : 'demo',
-	subscribe_key : 'demo'
-})
-
-pubnub.unsubscribe({
-    channel: ['my_channel', 'my_channel_1'],
-	channel_group : 'demo_group',
-	callback: function(m) {
-		console.log(m);
-	}
-})
-
-</script>
-</head>
-<body>
-	<div>This function is adding the channel groups and printing the response data in the <b>console</b>.</div>
-	<div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
-</body>
+    pubnub.unsubscribe({
+      channel: ['my_channel', 'my_channel_1'],
+      channel_group : 'demo_group',
+      callback: function(m) {
+        console.log(m);
+      }
+    });
+  </script>
+  </head>
+  <body>
+    <div>This function is adding the channel groups and printing the response data in the <b>console</b>.</div>
+    <div><br/>To open the console, Please press F12 and then select console from the tabs.</div>
+  </body>
 </html>
