@@ -1,38 +1,42 @@
 {
-	"name": "Example 3",
-	"sub-title": "Access comprehensive and most frequently updated physician data",
-	"tags": "",
-	"description": "BetterDoctor brings accuracy to doctor data with a real-time platform, master database and API services that enable everyone to add doctor data to their systems, websites and applications.\r\n\r\nThe BetterDoctor block allows you to access the database of doctors and insurance networks directly from your realtime data streams. Use BetterDoctor to search for a doctor by name, location, or specialty. BetterDoctor also retrieves doctor descriptions, a list of known conditions, insurance providers, ratings, photos, contact information and specialties. ",
-	"summary": "Access comprehensive and most frequently updated physician data.",
-	"url-title": "Try it Now",
-	"url": "https:\/\/admin.pubnub.com\/#\/blocks\/11008\/import",
-	"license": {
-		"type": "",
-		"url": "",
-		"show-license": 0
-	},
-	"update-date": "",
-	"author-title": "Author",
-	"author": "BetterDoctor",
-	"entry-title": "",
-	"entry": "\u003Cul\u003E\u003Cli\u003E\u003Ca href=\u0022https:\/\/betterdoctor.com\/developers\u0022 title=\u0022Documentation and API Keys\u0022 target=\u0022_blank\u0022\u003EDocumentation and API Keys\u003C\/a\u003E\u003C\/li\u003E\u003Cli\u003E\u003Ca href=\u0022http:\/\/betterdoctor.com\/\u0022 title=\u0022Homepage\u0022 target=\u0022_blank\u0022\u003EBetterDoctor Homepage\u003C\/a\u003E\u003C\/li\u003E\u003C\/ul\u003E",
-	"blocks-presentation": "\u003Cimg src=\u0022\/sites\/default\/files\/better-doctor-example-code.png\u0022 title=\u0022betterdoctorexample\u0022 alt=\u0022doctor data\u0022 \/\u003E",
-	"show-blocks-presentation": "1",
-	"walkthorugh-title": "Walkthrough",
-	"walkthorugh": "\u003Cdiv title=\u0022Page 2\u0022\u003E\r\n\t\u003Cp\u003E\r\n\t\tBy \u003Ca href=\u0022https:\/\/betterdoctor.com\/developers\u0022\u003Ecreating a free BetterDoctor user key here\u003C\/a\u003E, you get immediate access to BetterDoctor Provider Data. The free account is rate limited and you can\u0027t access all the data through the Public API. If you\u0027re interested in the Premium API,\u0026nbsp;\u003Ca href=\u0022http:\/\/betterdoctor.com\/developers\/index.html#contact-data\u0022\u003Econtact BetterDoctor\u003C\/a\u003E.\u003C\/p\u003E\r\n\r\n\u003C\/div\u003E\r\n",
-	"input-output": [{
-		"title": "Input",
-		"desc": "This is a sample payload for basic doctor search.",
-		"code": "<pre class=\u0022brush:javascript;>{\n\t\u0022action\u0022: \u0022search-doctor\u0022,\n\t\u0022payload\u0022: {\n\t\t\u0022user_key\u0022: \u00228ab12a0a284014916ea9d3a659b8e422\u0022,\n\t\t\u0022name\u0022: \u0022Tomasz\u0022,\n\t\t\u0022location\u0022: \u002237.773,-122.413,100\u0022\n\t}\n</pre>"
-	}, {
-		"title": "",
-		"desc": "",
-		"code": ""
-	}, {
-		"title": "",
-		"desc": "",
-		"code": ""
-	}],
-	"version": 1.1,
-	"dependencies": ""
+    "name": "Example 3",
+    "sub-title": "Access comprehensive and most frequently updated physician data",
+    "tags": "",
+    "description": "BetterDoctor brings accuracy to doctor data with a real-time platform, master database and API services that enable everyone to add doctor data to their systems, websites and applications.\r\n\r\nThe BetterDoctor block allows you to access the database of doctors and insurance networks directly from your realtime data streams. Use BetterDoctor to search for a doctor by name, location, or specialty. BetterDoctor also retrieves doctor descriptions, a list of known conditions, insurance providers, ratings, photos, contact information and specialties. ",
+    "summary": "Access comprehensive and most frequently updated physician data.",
+    "url-title": "Try it Now",
+    "url": "https:\/\/admin.pubnub.com\/#\/blocks\/11008\/import",
+    "license": {
+        "type": "",
+        "url": "",
+        "show-license": 0
+    },
+    "update-date": "",
+    "author-title": "Author",
+    "author": "BetterDoctor",
+    "entry-title": "",
+    "entry": "\u003Cul\u003E\u003Cli\u003E\u003Ca href=\u0022https:\/\/betterdoctor.com\/developers\u0022 title=\u0022Documentation and API Keys\u0022 target=\u0022_blank\u0022\u003EDocumentation and API Keys\u003C\/a\u003E\u003C\/li\u003E\u003Cli\u003E\u003Ca href=\u0022http:\/\/betterdoctor.com\/\u0022 title=\u0022Homepage\u0022 target=\u0022_blank\u0022\u003EBetterDoctor Homepage\u003C\/a\u003E\u003C\/li\u003E\u003C\/ul\u003E",
+    "blocks-presentation": "\u003Cimg src=\u0022\/sites\/default\/files\/better-doctor-example-code.png\u0022 title=\u0022betterdoctorexample\u0022 alt=\u0022doctor data\u0022 \/\u003E",
+    "show-blocks-presentation": "1",
+    "walkthorugh-title": "Walkthrough",
+    "walkthorugh": "\u003Cdiv title=\u0022Page 2\u0022\u003E\r\n\t\u003Cp\u003E\r\n\t\tBy \u003Ca href=\u0022https:\/\/betterdoctor.com\/developers\u0022\u003Ecreating a free BetterDoctor user key here\u003C\/a\u003E, you get immediate access to BetterDoctor Provider Data. The free account is rate limited and you can\u0027t access all the data through the Public API. If you\u0027re interested in the Premium API,\u0026nbsp;\u003Ca href=\u0022http:\/\/betterdoctor.com\/developers\/index.html#contact-data\u0022\u003Econtact BetterDoctor\u003C\/a\u003E.\u003C\/p\u003E\r\n\r\n\u003C\/div\u003E\r\n",
+    "input-output": [
+        {
+            "title": "Input",
+            "desc": "This is a sample payload for basic doctor search.",
+            "code": "<pre class=\u0022brush:javascript;>{\n\t\u0022action\u0022: \u0022search-doctor\u0022,\n\t\u0022payload\u0022: {\n\t\t\u0022user_key\u0022: \u00228ab12a0a284014916ea9d3a659b8e422\u0022,\n\t\t\u0022name\u0022: \u0022Tomasz\u0022,\n\t\t\u0022location\u0022: \u002237.773,-122.413,100\u0022\n\t}\n</pre>"
+        },
+        {
+          "title": "",
+          "desc": "",
+          "code": ""
+        },
+        {
+          "title": "",
+          "desc": "",
+          "code": ""
+        }
+    ],
+    "version": 1.1,
+    "dependencies": ""
 }
