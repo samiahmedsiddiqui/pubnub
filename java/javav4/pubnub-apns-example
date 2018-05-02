@@ -1,0 +1,94 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pubnub.apns.example;
+
+import com.google.gson.JsonObject;
+import com.pubnub.api.PNConfiguration;
+import com.pubnub.api.PubNub;
+import com.pubnub.api.callbacks.PNCallback;
+import com.pubnub.api.callbacks.SubscribeCallback;
+import com.pubnub.api.models.consumer.PNPublishResult;
+import com.pubnub.api.models.consumer.PNStatus;
+import com.pubnub.api.models.consumer.pubsub.PNMessageResult;
+import com.pubnub.api.models.consumer.pubsub.PNPresenceEventResult;
+import java.util.Arrays;
+
+/**
+ *
+ * @author sami
+ */
+public class PubNubAPNSExample {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        PNConfiguration pnConfiguration = new PNConfiguration();
+        pnConfiguration.setSubscribeKey("demo");
+        pnConfiguration.setPublishKey("demo");
+
+        PubNub pubnub = new PubNub(pnConfiguration);
+
+        pubnub.addListener(new SubscribeCallback() {
+            @Override
+            public void status(PubNub pubnub, PNStatus status) {
+
+            }
+
+            @Override
+            public void message(PubNub pubnub, PNMessageResult message) {
+                System.out.println(message.getMessage());
+                System.exit(0);
+            }
+
+            @Override
+            public void presence(PubNub pubnub, PNPresenceEventResult presence) {
+
+            }
+
+        });
+
+        pubnub.subscribe()
+            .channels(Arrays.asList("my_channel"))
+            .execute();
+
+        JsonObject apnsPayload = new JsonObject();
+        JsonObject apsPayload  = new JsonObject();
+
+        JsonObject gcmPayload  = new JsonObject();
+        JsonObject dataPayload = new JsonObject();
+
+        JsonObject payload = new JsonObject();
+
+        apsPayload.addProperty("alert", "hi");
+        apsPayload.addProperty("badge", 2);
+        apsPayload.addProperty("sound", "melody");
+
+        apnsPayload.add("aps", apsPayload);
+        apnsPayload.addProperty("c", "3");
+
+        dataPayload.addProperty("a", "1");
+
+        gcmPayload.add("data", dataPayload);
+        gcmPayload.addProperty("b", "2");
+
+        payload.add("pn_apns", apnsPayload);
+        payload.add("pn_gcm", gcmPayload);
+
+        System.out.print(payload);
+
+        pubnub.publish()
+            .message(payload)
+            .channel("hello_world")
+            .async(new PNCallback<PNPublishResult>() {
+                @Override
+                public void onResponse(PNPublishResult result, PNStatus status) {
+                    // handle publish result, status always present, result if successful
+                    // status.isError to see if error happened
+                }
+            });
+    }
+}
